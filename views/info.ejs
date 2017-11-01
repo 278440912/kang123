@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../han/css/css7.css"/>
+	</head>
+	<body>
+		<header></header>
+		<nav>
+			<div class="nav">
+				<h3>Roux Meetups</h3>
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="http://localhost:8080/create4" methods="GET">Speakers <img src="han/img/a.png"/></a></li>
+					<li><a href="http://localhost:8080/create5" methods="GET">Feedback</a></li>
+					<li><a href="http://localhost:8080/create3" methods="GET">Chat</a></li>
+				</ul>
+			</div>
+		</nav>
+		<footer>
+			<div class="footl">
+				<h3>Send us feedback</h3>
+				<form action="http://localhost:8080/create" method="POST">
+					<p>Name</p>
+					<input type="text" name="message" id="put-1"><br />
+					<p>Title</p>
+					<input type="text" name="name" id="put-2"><br />
+					<p>Message</p>
+					<textarea name="texts">welcome to our china</textarea><br />
+					<button>sumbit</button>
+					</form>
+			</div>
+			<div class="footr">
+				<h3>Recent Feedback</h3>
+				<% for(var i =0;i<data.length;i++){ %>
+			<div class="foot">
+				<img src="../han/img/x.png"/>
+				<%= data[i].message %>
+				<a class="a"><%= data[i].name %></a>
+				<br>
+				<p><%= data[i].texts %></p>
+				<hr>
+			</div>
+			
+			<% } %>
+
+
+			</div>
+		</footer>
+	</body>
+</html>
